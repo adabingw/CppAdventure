@@ -1,0 +1,44 @@
+// simple library search implementing structs and substrings
+
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+    struct Book {
+        string title;
+        string author;
+        string publisher;
+        int year;
+    };
+
+    Book catalogue[] = { {"Percy Jackson and the Lightning Thief", "Rick Riordan", "Puffin Books", 2005},
+                     {"Jane Eyre", "Charlotte Brontë", "Smith, Elder & Co.", 1847},
+                     {"Harry Potter and the Philosopher's Stone", "J.K Rowling", "Bloomsbury (UK)", 1997},
+                     {"Harry Potter and the Chamber of Secrets", "J.K Rowling", "Bloomsbury (UK)", 1998},
+                     {"Harry Potter and the Prisoner of Azkaban", "J.K Rowling", "Bloomsbury (UK)", 1999},
+                     {"Harry Potter and the Goblet of Fire", "J.K Rowling", "Bloomsbury (UK)", 2000},
+                     {"Harry Potter and the Order of the Phoenix", "J.K Rowling", "Bloomsbury (UK)", 2003},
+                     {"Harry Potter and the Half-Blood Prince", "J.K Rowling", "Bloomsbury (UK)", 2005},
+                     {"Harry Potter and the Deathly Hallows", "J.K Rowling", "Bloomsbury (UK)", 2007}
+                    };
+
+    int main() {
+        int counts = 0;
+        string key;
+        cout << "Enter keyword to search: " << endl;
+        getline(cin, key);
+        cout << "----------------------------" << endl;
+        for (int i = 0; i < 8; i++) {
+            string name = catalogue[i].title;
+            string author = catalogue[i].author;
+            int found = name.find(key);
+            int found2 = author.find(key);
+            if (found != string::npos || found2 != string::npos) {
+                cout << catalogue[i].title << endl;
+                counts ++;
+            }
+        }
+        cout << "----------------------------" << endl;
+        cout << counts << (counts == 1 ? " result " : " results ") << "found.";
+    }

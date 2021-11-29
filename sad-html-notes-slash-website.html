@@ -1,0 +1,935 @@
+<!== 
+lol i wrote this to try to remember what i learned from html
+creds to codecademy for the notes and knowledge! :D
+==>
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <header>
+      <h1>
+        Hawaiian Test Missile Launcher
+      </h1>
+        <p>
+          what's better than writing your HTML notes in HTML?
+          <br>
+          credits to codecademy for all this brain power :)
+        </p>
+        <br>
+    </header>
+  </head>
+
+  <body>
+
+    <section id = table-of-contents>
+      <h2>
+        TABLE OF CONTINENTS
+      </h2>
+      <ul>
+        <a href = "#introduction"> <li> Introduction </li> </a>
+        <a href = "#table"> <li> Table </li> </a>        
+        <a href = "#forms"> <li> Forms </li> </a>
+        <a href = "#form-val"> <li> Form Validation </li> </a>
+      </ul>
+    </section>
+
+    <section id = introduction>
+      <h2>
+        INTRODUCTION
+      </h2>
+      <p> HTML is organized into a family tree structure. HTML elements can have parents, grandparents, siblings, children, grandchildren, etc. </p>
+
+      <ol>
+        <a href = "#closing-tag"> <li> Closing Tag </li> </a>
+        <a href = "#attribute-name"> <li> Attribute Name and Value </li> </a>
+        <a href = "#image"> <li> Image Element </li> </a>
+        <a href = "#video"> <li> Video Element </li> </a>
+        <a href = "#heading"> <li> H1 - H6 Heading </li> </a>
+        <a href = "#paragraph"> <li> Paragraph Element </li> </a>
+        <a href = "#emphasis"> <li> Emphasis Element </li> </a>
+        <a href = "#list"> <li> Listed Item </li> </a>
+        <a href = "#ordered-list"> <li> Ordered List </li> </a>
+        <a href = "#unordered-list"> <li> Unordered List </li> </a>
+        <a href = "#div"> <li> Div </li> </a>
+        <a href = "#alt"> <li> Alt Attribute </li> </a>
+        <a href = "#unique-id"> <li> Unique ID Attributes </li> </a>
+        <a href = "#body"> <li> Body </li> </a>
+        <a href = "#head"> <li> Head </li> </a>
+        <a href = "#a"> <li> Anchor Element </li> </a>
+        <a href = "#target"> <li> Target Attribute </li> </a>
+        <a href = "#hash"> <li> Link to Different Part of PaGE </li> </a>
+        <a href = "#html-element"> <li> HTML Element </li> </a>
+        <a href = "#document"> <li> Document Type Declaration </li> </a>
+        <a href = "#title"> <li> Title Element </li> </a>
+      </ol>
+
+      <h4 id = "closing-tag">
+        Closing tag
+      </h4>
+      <p> 
+        An HTML closing tag is used to close the end of an HTML statement, like this: <br> <br>
+        &lt;whatever&gt; <br> . . . <br> &lt;/whatever&gt; <br> <br>
+      </p>
+
+      <h4 id = "attribute-name">
+        Attribute Name and Value
+      </h4>
+      <p> 
+        HTML attributes consist of a name and a value using the following syntax: <strong> name = "value" </strong> and can be added to the opening tag of an HTML element. 
+        <br> <br>
+        &lt;elementName name = "value"&gt; <br> . . . <br> &lt;/elementName&gt; <br> <br>
+      </p>
+
+      <h4 id = "line-break">
+        Line Break Element
+      </h4>
+      <p> 
+        HTML attributes consist of a name and a value using the following syntax: <strong> name = "value" </strong> and can be added to the opening tag of an HTML element. 
+        <br> <br>
+        &lt;elementName name = "value"&gt; <br> . . . <br> &lt;/elementName&gt; <br> <br>
+      </p>
+
+      <h4 id = "image">
+        Image Element
+      </h4>
+      <p> 
+        HTML image <em> img </em> elements embed images in documents. The src attribute contains the image URL and is mandatory. <em> img is an empty element meaning it should not have a closing tag. </em>
+        <br> <br>
+        &lt;img src = "image.jpg" &gt; <br> <br>
+      </p>
+
+      <h4 id = "video">
+        Video Element
+      </h4>
+      <p> 
+        The video element embeds a media player for video playback. The src attribute will contain the URL to the video. Adding the controls attribute will display video controls in the media player.
+        <br> <br>
+        &lt;video src = "test-video.mp4" controls&gt;
+        <br> Video not supported <br>
+        &lt;/video&gt; <br>
+        <p> <br>
+          "Video not supported" is printed when video cannot be played.
+        </p>
+        <br> <br>
+      </p>
+
+      <h4 id = "heading">
+        H1 - H6 Heading
+      </h4>
+      <p> 
+       HTML can use six different levels of heading elements. The heading elements are ordered from the highest level <strong> h1 </strong> to the lowest level <strong> h6 </strong>. 
+        <br> <br>
+        &lt;h1&gt; BIG HEADER &lt;/h1&gt; <br> 
+        &lt;h2&gt; 1st HEADER &lt;/h2&gt; <br> 
+        &lt;h3&gt; 2nd HEADER &lt;/h3&gt; <br> 
+        &lt;h4&gt; 3rd HEADER &lt;/h4&gt; <br> 
+        &lt;h5&gt; 4th HEADER &lt;/h5&gt; <br> 
+        &lt;h6&gt; 5th HEADER &lt;/h6&gt; <br> 
+        <br> <br>
+      </p>
+
+      <h4 id = "paragraph">
+        Paragraph Element
+      </h4>
+      <p> 
+       The paragraph element contains and displays a block of text. 
+        <br> <br>
+        &lt;p&gt; So casually cruel in the name of being honest... &lt;/p&gt; <br> <br>
+      </p>
+
+      <h4 id = "emphasis">
+        Emphasis Element
+      </h4>
+      <p> 
+        The <em>emphasis</em> element emphasizes text and browsers will usually italicize the emphasized text by default.
+        <br> <br>
+        &lt;em&gt; These words will be italicized &lt;/em&gt; <br> <br>
+      </p>
+
+      <h4 id = "strong">
+        Strong Element
+      </h4>
+      <p> 
+        The <strong>strong</strong> element highlights important, serious, or urgent text and browsers will normally render this highlighted text in bold by default. (bold)
+        <br> <br>
+        &lt;strong&gt; BOLD &lt;/strong&gt; <br> <br>
+      </p>
+
+      <h4 id = "list">
+        Listed Items
+      </h4>
+      <p> 
+        Creates a list of items inside: an ordered list, and an unordered list. 
+        <br> <br>
+        &lt;li&gt; list of elements &lt;/li&gt; <br> <br>
+      </p>
+
+      <h4 id = "ordered-list">
+        Ordered List
+      </h4>
+      <p> 
+       The ordered list element creates a list of items in sequential order. Each list item appears numbered by default. 
+        <br> <br>
+        &lt;ol&gt; <br> <br>
+
+        &lt;li&gt; list of elements &lt;/li&gt; <br>
+        &lt;li&gt; list of elements &lt;/li&gt; <br>
+        &lt;li&gt; list of elements &lt;/li&gt; <br>
+        &lt;li&gt; list of elements &lt;/li&gt; <br>
+        &lt;li&gt; list of elements &lt;/li&gt; <br>
+        &lt;li&gt; list of elements &lt;/li&gt; <br> <br>
+
+        &lt;/ol&gt; <br> <br>
+
+        <strong> What this looks like: </strong>
+
+        <ol>
+          <li> list of elements </li>
+          <li> list of elements </li>
+          <li> list of elements </li>
+          <li> list of elements </li>
+          <li> list of elements </li>
+          <li> list of elements </li>
+        </ol>
+
+        <br>
+      </p>
+
+      <h4 id = "unordered-list">
+        Unordered List
+      </h4>
+      <p> 
+       The ordered list element creates a list of items in sequential order. Each list item appears numbered by default. 
+        <br> <br>
+        &lt;ul&gt; <br> <br>
+
+        &lt;li&gt; list of elements &lt;/li&gt; <br>
+        &lt;li&gt; list of elements &lt;/li&gt; <br>
+        &lt;li&gt; list of elements &lt;/li&gt; <br>
+        &lt;li&gt; list of elements &lt;/li&gt; <br>
+        &lt;li&gt; list of elements &lt;/li&gt; <br>
+        &lt;li&gt; list of elements &lt;/li&gt; <br> <br>
+
+        &lt;/ul&gt; <br> <br>
+
+        <strong> What this looks like: </strong>
+
+        <ul>
+          <li> list of elements </li>
+          <li> list of elements </li>
+          <li> list of elements </li>
+          <li> list of elements </li>
+          <li> list of elements </li>
+          <li> list of elements </li>
+        </ul>
+
+        <br>
+      </p>
+
+      <h4 id = "div">
+        Div
+      </h4>
+      <p> 
+        The div element is used as a container that divides an HTML document into sections and is short for “division”. div elements can contain flow content such as headings, paragraphs, links, images, etc. 
+        <br> <br>
+        &lt;div&gt; A bunch of other stuff &lt;/div&gt; <br> <br>
+      </p>
+
+      <h4 id = "alt">
+        alt Attribute
+      </h4>
+      <p> 
+        An img element can have alternative text via the alt attribute. The alternative text will be displayed if an image fails to render due to an incorrect URL, if the image format is not supported by the browser, if the image is blocked from being displayed, or if the image has not been received from the URL. 
+        <br> <br>
+        &lt;img src = "image.jpg" alt="text describing image" &gt; <br> <br>
+      </p>
+
+      <h4 id = "unique-id">
+        Unique ID Attributes
+      </h4>
+      <p> 
+        In HTML, specific and unique id attributes can be assigned to different elements in order to differentiate between them.
+
+        When needed, the id value can be called upon by CSS and JavaScript to manipulate, format, and perform specific instructions on that element and that element only. Valid id attributes should begin with a letter and should only contain letters (a-Z), digits (0-9), hyphens (-), underscores (_), and periods (.).
+        <br> <br>
+         &lt;h1 id = "a1"&gt; BIG HEADER &lt;/h1&gt; <br> <br>
+      </p>
+
+      <h4 id = "body">
+        Body
+      </h4>
+      <p> 
+        The body element represents the content of an HTML document. Content inside body tags are rendered on the web browsers.
+
+        Note: There can be only one body element in a document. 
+        <br> <br>
+        &lt;body&gt; all of the stuff &lt;/body&gt; <br> <br>
+      </p>
+
+      <h4 id = "head">
+        Head
+      </h4>
+      <p> 
+        The head element contains general information about an HTML page that isn’t displayed on the page itself. This information is called metadata and includes things like the title of the HTML document and links to stylesheets. 
+        <br> <br>
+        &lt;head&gt; Metadata is contained in this element &lt;/head&gt; <br> <br>
+      </p>
+
+      <h4 id = "a">
+        Anchor Element
+      </h4>
+      <p> 
+        The anchor element is used to create hyperlinks in an HTML document. The hyperlinks can point to other webpages, files on the same server, a location on the same page, or any other URL via the hyperlink reference attribute, <strong>href</strong>. The <strong>href</strong> determines the location the anchor element points to. 
+        <br> <br>
+        &lt;a href = "google.ca"&gt; Google &lt;/a&gt; <br>
+        <a href = "google.ca"> Google </a>
+        <br> <br>
+      </p>
+
+      <h4 id = "target">
+        Target Attribute
+      </h4>
+      <p> 
+        The target attribute on an anchor element specifies where a hyperlink should be opened. A target value of <strong>"_blank"</strong> will tell the browser to open the hyperlink in a new tab in modern browsers, or in a new window in older browsers or if the browser has had settings changed to open hyperlinks in a new window. 
+        <br> <br>
+        &lt;a href = "google.ca" target="_blank" &gt; Google, opens in a new tab &lt;/a&gt; <br>
+        <a href = "google.ca"> Google, opens in a new tab </a>
+        <br> <br>
+      </p>
+
+      <h4 id = "hash">
+        Link to a Different Part of the Page #
+      </h4>
+      <p> 
+        The anchor element can create hyperlinks to different parts of the same HTML document using the href attribute to point to the desired location with <strong>#</strong> followed by the id of the element to link to. 
+        <br> <br>
+        &lt;h1 id = "a" &gt; Anchor Element &lt;/h1&gt; <br>
+        &lt;a href = "#a" &gt; Takes you to the Anchor Element&lt;/a&gt; <br>
+        <a href = "#a"> Takes you to the Anchor Element </a>
+        <br> <br>
+      </p>
+
+      <h4 id = "html-element">
+        HTML Element
+      </h4>
+      <p> 
+        The html element, the root of an HTML document, should be added after the !DOCTYPE declaration. All content/structure for an HTML document should be contained between the opening and closing html tags.
+        <br> <br>
+        &lt;html&gt; lol hi &lt;/html&gt; <br> <br>
+      </p>
+
+      <!-- this is a comment btw -->
+
+      <h4 id = "document">
+        Document Type Declaration
+      </h4>
+      <p> 
+        The document type declaration <strong>!DOCTYPE html</strong> is required as the first line of an HTML document. The doctype declaration is an instruction to the browser about what type of document to expect and which version of HTML is being used, in this case it’s HTML5.
+        <br> <br>
+        &lt;!DOCUTYPE html&gt; <br> <br>
+      </p>
+
+      <h4 id = "title">
+        Title Element
+      </h4>
+      <p> 
+       The title element contains a text that defines the title of an HTML document. The title is displayed in the browser’s title bar or tab in which the HTML page is displayed. The title element can only be contained inside a document’s head element. 
+        <br> <br>
+        &lt;!DOCUTYPE html&gt; <br> 
+        &lt;html&gt; <br> 
+        &lt;head&gt; <br> 
+        &lt;title&gt; TITLE OF WEBPAGE &lt;/title&gt;<br> 
+        &lt;/head&gt; <br> 
+        &lt;/html&gt; <br> 
+        <br> <br>
+      </p>
+
+    </section>
+
+    <section id = table>
+
+      <h2>
+        TABLE
+      </h2>
+
+      <ol>
+        <a href = "#create-table"> <li> Creating A Table </li> </a>
+        <a href = "#table-row"> <li> Table Row </li> </a>
+        <a href = "#table-data"> <li> Table Data </li> </a>
+        <a href = "#table-heading"> <li> Table Headers </li> </a>
+        <a href = "#table-borders"> <li> Table Borders </li> </a>
+        <a href = "#col-span"> <li> Spanning Columns </li> </a>
+        <a href = "#row-span"> <li> Spanning Rows </li> </a>
+        <a href = "#table-body"> <li> Table Body </li> </a>
+        <a href = "#table-head"> <li> Table Head </li> </a>
+      </ol>
+
+      <h4 id = "create-table"> Creating A Table </h4>
+        <p>
+        &lt;table&gt;<br> ... <br> &lt;/table&gt; <br> <br>
+        </p>
+      
+      <h4 id = "table-row"> Table Row </h4>
+        <p>
+        &lt;table&gt;<br> 
+        &lt;tr&gt;<br> 
+        <em> one row </em> <br> 
+        &lt;/tr&gt; <br>
+        &lt;tr&gt;<br> 
+        <em> another row </em> <br> 
+        &lt;/tr&gt; <br> 
+        &lt;/table&gt; <br> <br>
+        </p>
+
+      <h4 id = "table-data"> Table Data </h4>
+        <p>
+        &lt;table&gt;<br> 
+        &lt;tr&gt;<br> 
+        &lt;td&gt;<br> 
+        <em> insert table data </em> <br>
+        &lt;/td&gt; <br>
+        &lt;/tr&gt; <br>
+        &lt;tr&gt;<br> 
+        &lt;td&gt;<br> 
+        <em> insert table data </em> <br>
+        &lt;/td&gt; <br>
+        &lt;/tr&gt; <br> 
+        &lt;/table&gt; <br> <br>
+        </p>
+      
+      <h4 id = "table-heading"> Table Heading </h4>
+        <p>
+        &lt;table&gt;<br> <br>
+        
+        &lt;tr&gt;<br> 
+        &lt;th&gt;<br> 
+        <em> insert header name </em> <br>
+        &lt;/th&gt; <br>
+        &lt;th&gt;<br> 
+        <em> insert header name </em> <br>
+        &lt;/th&gt; <br>
+        &lt;/tr&gt; <br> <br>
+
+        &lt;tr&gt;<br> 
+        &lt;td&gt;<br> 
+        <em> insert data column 1 </em> <br>
+        &lt;/td&gt; <br>
+        &lt;td&gt;<br> 
+        <em> insert data column 2 </em> <br>
+        &lt;/td&gt; <br>
+        &lt;/tr&gt; <br> <br>
+
+        &lt;tr&gt;<br> 
+        &lt;td&gt;<br> 
+        <em> insert data column 1 </em> <br>
+        &lt;/td&gt; <br>
+        &lt;td&gt;<br> 
+        <em> insert data column 2 </em> <br>
+        &lt;/td&gt; <br>
+        &lt;/tr&gt; <br>
+
+        &lt;/table&gt; <br> <br>
+
+        What it looks like
+
+        <table>
+          <tr>
+            <th> insert header name </th>
+            <th> insert header name </th>
+          </tr>
+            <td> insert data column 1 </td>
+            <td> insert data column 2 </td>
+          <tr>
+            <td> insert data column 1 </td>
+            <td> insert data column 2 </td>
+          </tr>
+          <tr>
+          </tr>
+        </table>
+
+        </p>
+
+        <h4 id = "table-borders"> Table Borders </h4>
+        <p>
+        &lt;table <strong> border = "1" </strong>&gt;<br> ... <br> &lt;/table&gt; <br> <br>
+
+        What it looks like
+
+        <table border = "1">
+          <tr>
+            <th> insert header name </th>
+            <th> insert header name </th>
+          </tr>
+            <td> insert data column 1 </td>
+            <td> insert data column 2 </td>
+          <tr>
+            <td> insert data column 1 </td>
+            <td> insert data column 2 </td>
+          </tr>
+          <tr>
+          </tr>
+        </table>
+
+        </p>
+
+
+        <h4 id = "col-span"> Column Spanning </h4>
+        <p>
+          &lt;table&gt;<br> <br>
+        
+          &lt;tr&gt;<br> 
+          &lt;th&gt;<br> 
+          <em> insert header name </em> <br>
+          &lt;/th&gt; <br>
+          &lt;th&gt;<br> 
+          <em> insert header name </em> <br>
+          &lt;/th&gt; <br>
+          &lt;/tr&gt; <br> <br>
+
+          &lt;tr&gt;<br> 
+          &lt;td <strong> colspan = "2" </strong> &gt;<br> 
+          <em> insert data column 1 </em> <br>
+          &lt;/td&gt; <br>
+          &lt;/tr&gt; <br> <br>
+
+          &lt;tr&gt;<br> 
+          &lt;td&gt;<br> 
+          <em> insert data column 1 </em> <br>
+          &lt;/td&gt; <br>
+          &lt;td&gt;<br> 
+          <em> insert data column 2 </em> <br>
+          &lt;/td&gt; <br>
+          &lt;/tr&gt; <br>
+
+          &lt;/table&gt; <br> <br>
+        
+        What it looks like
+
+        <table border = "1">
+          <tr>
+            <th> insert header name </th>
+            <th> insert header name </th>
+          </tr>
+            <td colspan = "2"> insert data column 1 </td>
+          <tr>
+            <td> insert data column 1 </td>
+            <td> insert data column 2 </td>
+          </tr>
+          <tr>
+          </tr>
+        </table>
+
+        </p>
+
+
+        <h4 id = "row-span"> Row Spanning </h4>
+        <p>
+          &lt;table&gt;<br> <br>
+        
+          &lt;tr&gt;<br> 
+          &lt;th&gt;<br> 
+          <em> insert header name </em> <br>
+          &lt;/th&gt; <br>
+          &lt;th&gt;<br> 
+          <em> insert header name </em> <br>
+          &lt;/th&gt; <br>
+          &lt;/tr&gt; <br> <br>
+
+          &lt;tr&gt;<br> 
+          &lt;td <strong> rowspan = "2" </strong> &gt;<br> 
+          <em> insert data column 1 </em> <br>
+          &lt;/td&gt; <br>
+          &lt;/tr&gt; <br> <br>
+
+          &lt;tr&gt;<br> 
+          &lt;td&gt;<br> 
+          <em> insert data column 1 </em> <br>
+          &lt;/td&gt; <br>
+          &lt;td&gt;<br> 
+          <em> insert data column 2 </em> <br>
+          &lt;/td&gt; <br>
+          &lt;/tr&gt; <br>
+
+          &lt;/table&gt; <br> <br>
+        
+        What it looks like
+
+        <table border = "1">
+          <tr>
+            <th> insert header name </th>
+            <th> insert header name </th>
+          </tr>
+            <td rowspan = "2"> insert data column 1 </td>
+          <tr>
+            <td> insert data column 1 </td>
+            <td> insert data column 2 </td>
+          </tr>
+          <tr>
+          </tr>
+        </table>
+
+        </p>
+
+        <h4 id = "table-body"> Table Body </h4>
+        <p>
+          Long tables can be sectioned off using the table body element: tbody. The tbody element should contain all of the table’s data, excluding the table headings. <br> <br>
+        &lt;table&gt; <br> <strong>
+        &lt;tbody&gt;<br> ... <br> &lt;/tbody&gt; </strong> <br>
+        &lt;/table&gt;
+         <br> <br>
+        </p>
+
+        <h4 id = "table-head"> Table Head </h4>
+        <p>
+          &lt;table&gt;<br> <br>
+        
+          &lt;<strong>thead</strong>&gt;<br>
+          &lt;tr&gt;<br> 
+          &lt;th&gt;<br> 
+          <em> insert header name </em> <br>
+          &lt;/th&gt; <br>
+          &lt;th&gt;<br> 
+          <em> insert header name </em> <br>
+          &lt;/th&gt; <br>
+          &lt;/tr&gt; <br>
+          &lt;<strong>/thead</strong>&gt;<br> <br>
+
+          &lt;tr&gt;<br> 
+          &lt;td <strong> colspan = "2" </strong> &gt;<br> 
+          <em> insert data column 1 </em> <br>
+          &lt;/td&gt; <br>
+          &lt;/tr&gt; <br> <br>
+
+          &lt;tr&gt;<br> 
+          &lt;td&gt;<br> 
+          <em> insert data column 1 </em> <br>
+          &lt;/td&gt; <br>
+          &lt;td&gt;<br> 
+          <em> insert data column 2 </em> <br>
+          &lt;/td&gt; <br>
+          &lt;/tr&gt; <br>
+
+          &lt;/table&gt; <br> <br>
+        
+        What it looks like
+
+        <table border = "1">
+          <tr>
+            <th> insert header name </th>
+            <th> insert header name </th>
+          </tr>
+            <td colspan = "2"> insert data column 1 </td>
+          <tr>
+            <td> insert data column 1 </td>
+            <td> insert data column 2 </td>
+          </tr>
+          <tr>
+          </tr>
+        </table>
+
+        </p> <br>
+    </section>
+
+    <section id = "forms">
+      <h2> FORMS </h2>
+
+      <h4> INTRO TO FORMS </h4>
+        <p>
+          &lt;form action="/example.html" method="POST">
+          &lt;/form> <br> <br>
+
+          In the above example, we’ve created the skeleton for a &lt;form> that will send information to example.html as a POST request:
+
+          <ul>
+            <li> The action attribute determines where the information is sent. </li>
+            <li> The method attribute is assigned a HTTP verb that is included in the HTTP request. </li>
+          </ul>
+
+        </p>
+
+      <h4> ADDING A LABEL </h4>
+        <P>
+          The <stong>label</stong> element has an opening and closing tag and displays text that is written between the opening and closing tags. To associate a <stong>label</stong> and an <stong>input</stong>, the <stong>input</stong> needs an id attribute. We then assign the for attribute of the <stong>label</stong> element with the value of the id attribute of <stong>input</stong>. <br> <br>
+
+          &lt;label for="meal">What do you want to eat?</label> <br> <br>
+
+        </P>
+
+      <h4> PASSWORD INPUT </h4>
+        <P>
+          An &lt;input type ="password"> element will replace input text with another character like an asterisk (*) or a dot (•). <br> <br>
+
+          &lt;label for="user-password">Password: &lt;/label>
+          &lt; <strong>input type="password" </strong> id="user-password" name="user-password">
+
+        </P>
+
+      <h4> MORE </h4>
+      <p>
+
+        Sooooooooo I don't feel like reformatting the stuff so I'll not include the angled brackets lol so I'll use curly brackets to indicate angled brackets<br> <br>
+        &lt;!DOCTYPE html> <br>
+        &lt;html><br>
+          &lt;head><br>
+          &lt;/head><br>
+          &lt;body><br>
+            &lt;section id="overlay"><br>
+      &lt;hr><br>
+      <strong>
+
+        <br>
+
+      <strong> initialize form. </strong> <br> <br>
+      &lt;form action="submission.html" method="POST"><br>
+
+      <br>
+
+      <strong> text input. </strong> <br> <br>
+      </strong>
+        &lt;h1>Create a burger!&lt;/h1><br>
+					&lt;section class="protein"><br>
+          <strong>
+          &lt;label for="patty">What type of protein would you like?&lt;/label><br>
+    			&lt;input type="text" name="patty" id="patty"><br>
+          </strong>
+        &lt;/section><br>
+        &lt;hr><br>
+
+        <br>
+
+        <strong> number input. </strong> <br> <br>
+        &lt;section class="patties"> <br>
+        <strong>
+          &lt;label for="amount">How many patties would you like? &lt;/label> <br>
+          &lt;input type="number" name="amount" id="amount"> <br>
+          </strong>
+        &lt;/section><br>
+        &lt;hr><br>
+
+        <br>
+
+        <strong> range input. </strong> <br> <br>
+        &lt;section class="cooked"> <br>
+        <strong>
+          &lt;label for="doneness">How do you want your patty cooked&lt;/label><br>
+          &lt;br><br>
+          &lt;span>Rare&lt;/span> <br>
+          &lt;input type="range" name="doneness" id="doneness" value="3" min="1" max="5"> <br>
+          </strong>
+          &lt;span>Well-Done</span> <br>
+        &lt;/section> <br>
+        &lt;hr> <br>
+
+        <br>
+
+        <strong> checkbox input. </strong> <br> <br>
+        &lt;section class="toppings"><br>
+          &lt;span>What toppings would you like?&lt;/span> <br>
+          &lt;br><br>
+          <strong>
+          &lt;input type="checkbox" name="topping" id="lettuce"  value="lettuce"> <br>
+          &lt;label for="lettuce">Lettuce&lt;/label> <br>
+          &lt;input type="checkbox" name="topping" id="tomato" value="tomato"> <br>
+          &lt;label for="tomato">Tomato&lt;/label> <br>
+          &lt;input type="checkbox" name="topping" id="onion" value="onion"> <br>
+          &lt;label for="onion">Onion&lt;/label> <br>
+          </strong>
+        &lt;/section> <br>
+        &lt;hr> <br>
+
+        <br>
+
+        <strong> radio button input. </strong> <br> <br>
+        &lt;section class="cheesy"> <br>
+          &lt;span>Would you like to add cheese?&lt;/span>
+          &lt;br> <br>
+          <strong>
+          &lt;input type="radio" name="cheese" id="yes" value="yes"> <br>
+          &lt;label for="yes">Yes&lt;/label> <br>
+          &lt;input type="radio" name="cheese" id="no" value="yes"> <br>
+          &lt;label for="no">No&lt;/label> <br>
+          </strong>
+        &lt;/section> <br>
+        &lt;hr> <br>
+
+        <br>
+
+        <strong> drop down list. </strong> <br> <br>
+        &lt;section class="bun-type"> <br>
+        <strong>
+          &lt;label for="bun">What type of bun would you like?&lt;/label> <br>
+          &lt;select name="bun" id="bun"> <br>
+            &lt;option value="sesame">Sesame&lt;/option> <br>
+            &lt;option value="potatoe">Potato&lt;/option> <br>
+            &lt;option value="pretzel">Pretzel&lt;/option> <br>
+          &lt;/select> <br>
+          </strong>
+        &lt;/section> <br>
+        &lt;hr> <br>
+
+        <br>
+
+        <strong> datalist input. </strong> <br> <br>
+        &lt;section class="sauce-selection"> <br>
+        <strong>
+          &lt;label for="sauce">What type of sauce would you like?&lt;/label> <br>
+          &lt;input list="sauces" id="sauce" name="sauce"> <br>
+          &lt;datalist id="sauces"> <br>
+            &lt;option value="ketchup">&lt;/option> <br>
+            &lt;option value="mayo">&lt;/option> <br>
+            &lt;option value="mustard">&lt;/option> <br>
+          &lt;/datalist> <br>
+          </strong>
+        &lt;/section> <br>
+        &lt;hr> <br>
+
+        <br>
+
+        <strong> textarea input. </strong> <br> <br>
+        &lt;section class="extra-info"> <br>
+        <strong>
+          &lt;label for="extra">Anything else you want to add? <br> &lt;/label>
+          &lt;br> <br>
+          &lt;textarea id="extra" name="extra" rows="3" cols="40">&lt;/textarea> <br>
+        </strong>
+        &lt;/section> <br>
+        &lt;hr> <br>
+
+        <br>
+
+        <strong> submit form. </strong> <br> <br>
+        &lt;section class="submission"> <br>
+        <strong>
+          &lt;input type="submit" value="Submit"> <br> </strong>
+        &lt;/section> <br>
+        
+      &lt;/form> <br> <br>
+
+      <strong> What it looks like </strong> <br>
+
+      <hr>
+      <form action="submission.html" method="POST">
+        <h1>Create a burger!</h1>
+					<section class="protein">
+          <label for="patty">What type of protein would you like?</label>
+    			<input type="text" name="patty" id="patty">
+        </section>
+        <hr>
+        <section class="patties">
+          <label for="amount">How many patties would you like?</label>
+          <input type="number" name="amount" id="amount">
+        </section>
+        <hr>
+        <section class="cooked">
+          <label for="doneness">How do you want your patty cooked</label>
+          <br>
+          <span>Rare</span>
+          <input type="range" name="doneness" id="doneness" value="3" min="1" max="5">
+          <span>Well-Done</span>
+        </section>
+        <hr>
+        <section class="toppings">
+          <span>What toppings would you like?</span>
+          <br>
+          <input type="checkbox" name="topping" id="lettuce" value="lettuce">
+          <label for="lettuce">Lettuce</label>
+          <input type="checkbox" name="topping" id="tomato" value="tomato">
+          <label for="tomato">Tomato</label>
+          <input type="checkbox" name="topping" id="onion" value="onion">
+          <label for="onion">Onion</label>
+        </section>
+        <hr>
+        <section class="cheesy">
+          <span>Would you like to add cheese?</span>
+          <br>
+          <input type="radio" name="cheese" id="yes" value="yes">
+          <label for="yes">Yes</label>
+          <input type="radio" name="cheese" id="no" value="yes">
+          <label for="no">No</label>
+        </section>
+        <hr>
+        <section class="bun-type">
+          <label for="bun">What type of bun would you like?</label>
+          <select name="bun" id="bun">
+            <option value="sesame">Sesame</option>
+            <option value="potatoe">Potato</option>
+            <option value="pretzel">Pretzel</option>
+          </select>
+        </section>
+        <hr>
+        <section class="sauce-selection">
+          <label for="sauce">What type of sauce would you like?</label>
+          <input list="sauces" id="sauce" name="sauce">
+          <datalist id="sauces">
+            <option value="ketchup"></option>
+            <option value="mayo"></option>
+            <option value="mustard"></option>
+          </datalist>
+        </section>
+        <hr>
+        <section class="extra-info">
+          <label for="extra">Anything else you want to add?</label>
+          <br>
+          <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+        </section>
+        <hr>
+
+        <section class="submission">
+          <!--Add your code below-->
+          <input type="submit" value="Submit">
+        </section>
+        
+      </form>
+    </section>
+
+      </p>
+
+    </section>
+
+    <section id = "form-val">
+      <h2> Form Validation </h2>
+
+      <ol>
+        <a href = "#req-input"> <li> Requiring an Input </li> </a>
+        <a href = "#min-max"> <li> Set Min and Max </li> </a>
+        <a href = "#check-len"> <li> Check Text Length </li> </a>
+        <a href = "#match-pattern"> <li> Matching Pattern </li> </a>
+      </ol>
+
+      <h4 id = "req-input"> Requiring an Input </h4>
+        <p>
+          Sometimes we have fields in our forms which are not optional, i.e. there must be information provided before we can submit it. To enforce this rule, we can add the <strong>required </strong>attribute to an input element. <br> <br>
+          &lt;input id="allergies" name="allergies" type="text" <strong>required</strong>>
+        </p>
+
+      <h4 id = "min-max"> Set a Minimum and Maximum </h4>
+        <p>
+          To set a minimum acceptable value, we use the <strong>min </strong>attribute and assign a value. On the flip side, to set a maximum acceptable value, we assign the <strong>max </strong>attribute a value.
+          <br> <br>
+          &lt;input id = "guests" name = "guests" type = "number" <strong>min="1" max="4"</strong>>
+        </p>
+
+      <h4 id = "check-len"> Check Text Length </h4>
+        <p>
+          To set a minimum number of characters for a text field, we add the <strong>minlength </strong>attribute and a value to set a minimum value. Similarly, to set the maximum number of characters for a text field, we use the <strong>maxlength</strong> attribute and set a maximum value.
+          <br> <br>
+          &lt;input id="summary" name="summary" type="text" <strong> minlength="5" maxlength="250" </strong> required>
+        </p>
+      
+      <h4 id = "match-pattern"> Matching a Pattern </h4>
+        <p>
+          When we want user input to follow specific guidelines, we use the <strong>pattern</strong> attribute and assign it a regular expression, or regex. Regular expressions are a sequence of characters that make up a search pattern. If the input matches the regex, the form can be submitted.
+          <br> <br>
+          &lt;input id="payment" name="payment" type="text" required <strong>pattern="[0-9]{14,16}" </strong>> <br> <br>
+          // checks that the user provided only numbers and that they entered at least 14 digits and at most 16 digits.
+        </p>
+
+    </section>
+
+    <h1> YAY TOOT TOOT </h1>
+    <p> yo here's the code for the notes: <a href = "github.com"> Github </a>
+
+  </body>
+
+</html>

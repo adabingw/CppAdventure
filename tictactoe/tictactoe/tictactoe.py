@@ -60,7 +60,7 @@ def result(board, action):
     new_board = deepcopy(board)
     i, j = action
 
-    if board[i][j] != None:
+    if board[i][j] is not None:
         raise Exception
     else:
         new_board[i][j] = player_move
@@ -98,7 +98,7 @@ def terminal(board):
     Returns True if game is over, False otherwise.
     """
     # game is won by one of the players
-    if winner(board) != None:
+    if winner(board) is not None:
         return True
 
     # moves still possible
@@ -115,11 +115,11 @@ def utility(board):
     Returns 1 if X has won the game, -1 if O has won, 0 otherwise.
     """
 
-    win_player = winner(board)
+    win = winner(board)
 
-    if win_player == X:
+    if win == X:
         return 1
-    elif win_player == O:
+    elif win == O:
         return -1
     else:
         return 0

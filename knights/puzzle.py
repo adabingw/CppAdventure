@@ -12,10 +12,10 @@ CKnave = Symbol("C is a Knave")
 # Puzzle 0
 # A says "I am both a knight and a knave."
 knowledge0 = And(
-    Not(And(AKnight, AKnave)),
+    Not(And(AKnight, AKnave)), 
     Or(AKnight, AKnave), 
-    Implication(AKnight, And(AKnight, AKnave)),
-    Implication(AKnave, Not(And(AKnight, AKnave)))
+    Implication(AKnight, And(AKnight, AKnave)), 
+    Implication(AKnave, Not(And(AKnight, AKnave)))    
 )
 
 # Puzzle 1
@@ -23,12 +23,12 @@ knowledge0 = And(
 # B says nothing.
 knowledge1 = And(
     Not(And(AKnight, AKnave)),
-    Or(AKnight, AKnave), 
     Not(And(BKnight, BKnave)),
+    Or(AKnight, AKnave),  
     Or(BKnight, BKnave), 
-    
-    Implication(AKnight, And(AKnave, BKnave)),
+    Implication(AKnight, And(AKnave, BKnave)), 
     Implication(AKnave, Not(And(AKnave, BKnave)))
+    # TODO
 )
 
 # Puzzle 2
@@ -36,15 +36,14 @@ knowledge1 = And(
 # B says "We are of different kinds."
 knowledge2 = And(
     Not(And(AKnight, AKnave)),
-    Or(AKnight, AKnave), 
     Not(And(BKnight, BKnave)),
+    Or(AKnight, AKnave),  
     Or(BKnight, BKnave), 
-    
     Implication(AKnight, And(AKnight, BKnight)),
     Implication(AKnave, Not(And(AKnave, BKnave))),
-    
     Implication(BKnight, Not(And(AKnight, BKnight))), 
     Implication(BKnave, And(AKnave, BKnave))
+    # TODO
 )
 
 # Puzzle 3
@@ -54,61 +53,22 @@ knowledge2 = And(
 # C says "A is a knight."
 knowledge3 = And(
     Not(And(AKnight, AKnave)),
-    Or(AKnight, AKnave), 
     Not(And(BKnight, BKnave)),
+    Not(And(CKnight, CKnave)), 
+    Or(AKnight, AKnave),  
     Or(BKnight, BKnave), 
-    Not(And(CKnight, CKnave)),
-    Or(CKnight, CKnave),
+    Or(CKnight, CKnave), 
     
-    # A
-    Or(
-        # "I am a knight."
-        And(
-            Implication(AKnight, AKnight),
-            Implication(AKnave, Not(AKnight))
-        ),
-        
-        # "I am a knave."
-        And(
-            Implication(AKnight, AKnave),
-            Implication(AKnave, Not(AKnave))
-        )
-    ),
-
-    Not(And(
-        # "I am a knight."
-        And(
-            Implication(AKnight, AKnight),
-            Implication(AKnave, Not(AKnight))
-        ),
-        
-        # "I am a knave."
-        And(
-            Implication(AKnight, AKnave),
-            Implication(AKnave, Not(AKnave))
-        )
-    )),
-
-
-    # B
-    Implication(BKnight, And(
-        Implication(AKnight, AKnave),
-        Implication(AKnave, Not(AKnave))
-    )),
-
-    Implication(BKnave, Not(And(
-        Implication(AKnight, AKnave),
-        Implication(AKnave, Not(AKnave))
-    ))),
-
-
-    # B 
-    Implication(BKnight, CKnave),
-    Implication(BKnave, Not(CKnave)),
-
-    # C
-    Implication(CKnight, AKnight),
-    Implication(CKnave, Not(AKnight))
+    Implication(CKnight, AKnight), 
+    Implication(CKnave, Not(AKnight)), 
+    
+    Implication(BKnight, And(CKnave, Implication(AKnight, AKnave))), 
+    Implication(BKnave, Not(And(CKnave, Implication(AKnave, Not(AKnave))))), 
+    
+    Implication(AKnight, Or(AKnight, AKnave)), 
+    Implication(AKnave, Not(Or(AKnight, AKnave))) 
+    
+    # TODO
 )
 
 

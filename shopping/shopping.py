@@ -1,8 +1,8 @@
 import csv
 import sys
-import pandas
+import pandas 
 
-from sklearn.grid_search  import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix
 
@@ -32,7 +32,6 @@ def main():
     print(f"True Positive Rate: {100 * sensitivity:.2f}%")
     print(f"True Negative Rate: {100 * specificity:.2f}%")
 
-
 def load_data(filename):
     """
     Load shopping data from a CSV file `filename` and convert into a list of
@@ -61,54 +60,48 @@ def load_data(filename):
     labels should be the corresponding list of labels, where each label
     is 1 if Revenue is true, and 0 otherwise.
     """
-    # not my code
-    
     evidence = []
-    labels = []
-
-    months = {'Jan': 0,
-              'Feb': 1,
-              'Mar': 2,
-              'Apr': 3,
-              'May': 4,
-              'June': 5,
-              'Jul': 6,
-              'Aug': 7,
-              'Sep': 8,
-              'Oct': 9,
-              'Nov': 10,
-              'Dec': 11}
-
-    # read csv file
-    csv_file = pandas.read_csv(filename)
-
-    # prepare labels dataframe
-    labels_df = csv_file['Revenue']
-
-    # prepare evidence dataframe
-    evidence_df = csv_file.drop(columns=['Revenue'])
-
-    # replace month names with numerical values
-    evidence_df = evidence_df.replace(months)
-
-    # replace boolean with 0/1 values
-    evidence_df['VisitorType'] = evidence_df['VisitorType'].apply(lambda x: 1 if x == 'Returning_Visitor' else 0)
-    evidence_df['Weekend'] = evidence_df['Weekend'].apply(lambda x: 1 if x == 'True' else 0)
-    labels_df = labels_df.apply(lambda x: 1 if x is True else 0)
-
-    # convert dataframes to lists
-    evidence_list = evidence_df.values.tolist()
-    labels_list = labels_df.values.tolist()
-
-    return evidence_list, labels_list
-
+    label = []
+    
+    month = {
+            'Jan': 0,
+            'Feb': 1,
+            'Mar': 2,
+            'Apr': 3,
+            'May': 4,
+            'June': 5,
+            'Jul': 6,
+            'Aug': 7,
+            'Sep': 8,
+            'Oct': 9,
+            'Nov': 10,
+            'Dec': 11
+    }
+    
+    with open(filename) as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            evidence_df = row.copy()
+            revenue = row["Revenue"]
+            del evidence_df["Revenue"]
+            evidence_df["Month"] = month[evidence_df["Month"]]
+            evidence_df["VisitorType"] = 1 if evidence_df["VisitorType"] == "Returning_Visitor" else 0
+            evidence_df["Weekend"] = 1 if evidence_df["Weekend"] == "TRUE" else 0 
+            revenue = 1 if revenue == "TRUE" else 0
+            for k, v in evidence_df.items():
+                evidence_df[k] = float(v)
+            evidence.append(list(evidence_df.values()))
+            label.append(revenue)
+    
+    return evidence, label 
 
 def train_model(evidence, labels):
     """
     Given a list of evidence lists and a list of labels, return a
     fitted k-nearest neighbor model (k=1) trained on the data.
     """
-    neighbour = KNeighborsClassifier(n_neighbors=1)
+    # print(evidence)
+    neighbour = KNeighborsClassifier(n_neighbors = 1)
     neighbour.fit(evidence, labels)
     return neighbour
 
@@ -128,11 +121,11 @@ def evaluate(labels, predictions):
     representing the "true negative rate": the proportion of
     actual negative labels that were accurately identified.
     """
+    
     true_neg, false_pos, false_neg, true_pos = confusion_matrix(labels, predictions).ravel()
     sensitivity = true_pos / (true_pos + false_neg)
     specificity = true_neg / (true_neg + false_pos)
     return sensitivity, specificity
-
 
 if __name__ == "__main__":
     main()
